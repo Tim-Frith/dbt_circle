@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: raw_data_circle
+    description: raw data from circle
+    tables:
+      - name: raw_cc_sales
+        tests:
+          - unique:
+              column_name: "(product_id || '_' || date_date)"
+      - name: raw_cc_stock
